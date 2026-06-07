@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+void imprime_serie(double i, double j, double k) {
+    if (i > j) return;
+    printf("%.2f ", i);
+    imprime_serie(i + k, j, k);
+}
+ 
+int main(void) {
+    double i, j, k;
+    printf("Digite i, j e k: ");
+    scanf("%lf %lf %lf", &i, &j, &k);
+    imprime_serie(i, j, k);
+    printf("\n");
+    return 0;
+}
