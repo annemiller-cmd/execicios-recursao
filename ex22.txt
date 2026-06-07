@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+long long fibg(long long f0, long long f1, int n) {
+    if (n == 0) return f0;
+    if (n == 1) return f1;
+    return fibg(f0, f1, n - 1) + fibg(f0, f1, n - 2);
+}
+ 
+int main(void) {
+    long long f0, f1;
+    int n;
+    printf("Digite f0, f1 e N: ");
+    scanf("%lld %lld %d", &f0, &f1, &n);
+    printf("fibg(%lld, %lld, %d) = %lld\n", f0, f1, n, fibg(f0, f1, n));
+    return 0;
+}
