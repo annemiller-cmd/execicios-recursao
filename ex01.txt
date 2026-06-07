@@ -1,0 +1,14 @@
+#include <stdio.h>
+ 
+int somatorio(int n) {
+    if (n == 1) return 1;
+    return n + somatorio(n - 1);
+}
+ 
+int main(void) {
+    int n;
+    printf("Digite N: ");
+    scanf("%d", &n);
+    printf("Somatorio de 1 a %d = %d\n", n, somatorio(n));
+    return 0;
+}
