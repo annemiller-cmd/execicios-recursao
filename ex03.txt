@@ -1,0 +1,14 @@
+#include <stdio.h>
+ 
+long long soma_cubos(int n) {
+    if (n == 1) return 1;
+    return (long long)n * n * n + soma_cubos(n - 1);
+}
+ 
+int main(void) {
+    int n;
+    printf("Digite N: ");
+    scanf("%d", &n);
+    printf("Soma dos primeiros %d cubos = %lld\n", n, soma_cubos(n));
+    return 0;
+}
