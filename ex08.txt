@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+void decrescente(int n) {
+    if (n < 0) return;
+    printf("%d ", n);
+    decrescente(n - 1);
+}
+ 
+int main(void) {
+    int n;
+    printf("Digite N: ");
+    scanf("%d", &n);
+    decrescente(n);
+    printf("\n");
+    return 0;
+}
