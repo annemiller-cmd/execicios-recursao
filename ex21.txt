@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+/* F(1)=1, F(2)=2, F(n) = 2*F(n-1) + 3*F(n-2) */
+long long sequencia_f(int n) {
+    if (n == 1) return 1;
+    if (n == 2) return 2;
+    return 2 * sequencia_f(n - 1) + 3 * sequencia_f(n - 2);
+}
+ 
+int main(void) {
+    int n;
+    printf("Digite N: ");
+    scanf("%d", &n);
+    printf("F(%d) = %lld\n", n, sequencia_f(n));
+    return 0;
+}
