@@ -1,0 +1,21 @@
+#include <stdio.h>
+ 
+int menor_elemento(int arr[], int tamanho, int idx) {
+    if (idx == tamanho - 1) return arr[idx];
+    int menor_resto = menor_elemento(arr, tamanho, idx + 1);
+    return arr[idx] < menor_resto ? arr[idx] : menor_resto;
+}
+ 
+int main(void) {
+    int n, i;
+    printf("Digite o tamanho do vetor: ");
+    scanf("%d", &n);
+    int arr[n];
+    for (i = 0; i < n; i++) {
+        printf("arr[%d]: ", i);
+        scanf("%d", &arr[i]);
+    }
+    printf("Menor elemento: %d\n", menor_elemento(arr, n, 0));
+    return 0;
+}
+ 
