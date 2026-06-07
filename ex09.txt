@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+void pares_crescente(int atual, int n) {
+    if (atual > n) return;
+    printf("%d ", atual);
+    pares_crescente(atual + 2, n);
+}
+ 
+int main(void) {
+    int n;
+    printf("Digite N (par): ");
+    scanf("%d", &n);
+    pares_crescente(0, n);
+    printf("\n");
+    return 0;
+}
