@@ -1,0 +1,15 @@
+#include <stdio.h>
+ 
+/* Termo geral: (1 + t^2) / t  para t = 1, 2, ..., n */
+double serie_s(int t, int n) {
+    if (t > n) return 0.0;
+    return (1.0 + (double)t * t) / t + serie_s(t + 1, n);
+}
+ 
+int main(void) {
+    int n;
+    printf("Digite N (> 0): ");
+    scanf("%d", &n);
+    printf("S(%d) = %.4f\n", n, serie_s(1, n));
+    return 0;
+}
