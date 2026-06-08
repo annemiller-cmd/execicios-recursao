@@ -1,0 +1,14 @@
+#include <stdio.h>
+ 
+long long inverter_numero(int n, long long acumulado) {
+    if (n == 0) return acumulado;
+    return inverter_numero(n / 10, acumulado * 10 + n % 10);
+}
+ 
+int main(void) {
+    int n;
+    printf("Digite N: ");
+    scanf("%d", &n);
+    printf("Invertido: %lld\n", inverter_numero(n, 0));
+    return 0;
+}
