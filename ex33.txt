@@ -1,0 +1,25 @@
+#include <stdio.h>
+ 
+void inverter_vetor(int arr[], int inicio, int fim) {
+    if (inicio >= fim) return;
+    int tmp = arr[inicio];
+    arr[inicio] = arr[fim];
+    arr[fim] = tmp;
+    inverter_vetor(arr, inicio + 1, fim - 1);
+}
+ 
+int main(void) {
+    int n, i;
+    printf("Digite o tamanho do vetor: ");
+    scanf("%d", &n);
+    int arr[n];
+    for (i = 0; i < n; i++) {
+        printf("arr[%d]: ", i);
+        scanf("%d", &arr[i]);
+    }
+    inverter_vetor(arr, 0, n - 1);
+    printf("Vetor invertido: ");
+    for (i = 0; i < n; i++) printf("%d ", arr[i]);
+    printf("\n");
+    return 0;
+}
