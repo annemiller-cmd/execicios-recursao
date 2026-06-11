@@ -1,8 +1,9 @@
 #include <stdio.h>
  
 void decrescente(int n) {
-    if (n==0)
+    if (n==0){
       printf("%d ", n);
+    }
     printf("%d ", n);
     decrescente(n - 1);
 }
