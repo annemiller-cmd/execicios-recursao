@@ -1,22 +1,21 @@
 #include <stdio.h>
  
-void exibe_array(int arr[], int tamanho, int idx) {
-    if (idx == tamanho) return;
-    printf("%d ", arr[idx]);
-    exibe_array(arr, tamanho, idx + 1);
+void exibe_array(int arr[], int tamanho, int n) {
+    if (n == tamanho) return;
+    printf("%d ", arr[n]);
+    exibe_array(arr, tamanho, n + 1);
 }
  
-int main(void) {
-    int n, i;
+int main(void) { 
+    int x, i;
     printf("Digite o tamanho do array: ");
-    scanf("%d", &n);
-    int arr[n];
-    for (i = 0; i < n; i++) {
+    scanf("%d", &x);
+    int arr[x];
+    for (i = 0; i < x; i++) {
         printf("arr[%d]: ", i);
         scanf("%d", &arr[i]);
     }
     printf("Array: ");
-    exibe_array(arr, n, 0);
-    printf("\n");
+    exibe_array(arr, x, 0);
     return 0;
 }
