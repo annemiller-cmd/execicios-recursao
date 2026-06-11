@@ -9,11 +9,10 @@ void crescente(int n) {
     printf("%d ", n);
 }
  
-int main(void) {
+int main() {
     int n;
     printf("Digite N: ");
     scanf("%d", &n);
     crescente(n);
-    printf("\n");
     return 0;
 }
