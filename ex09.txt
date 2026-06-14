@@ -6,7 +6,7 @@ void pares_crescente(int atual, int n) {
     pares_crescente(atual + 2, n);
 }
  
-int main(void) {
+int main() {
     int n;
     printf("Digite N (par): ");
     scanf("%d", &n);
