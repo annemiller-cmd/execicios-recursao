@@ -1,15 +1,9 @@
 #include <stdio.h>
  
-double soma_serie(double i, double j, double k) {
-    if (i > j) return 0.0;
-    return i + soma_serie(i + k, j, k);
-}
- 
-int main(void) {
-    double i, j, k;
-    printf("Digite i, j e k: ");
-    scanf("%lf %lf %lf", &i, &j, &k);
-    printf("SomaSerie(%.2f, %.2f, %.2f) = %.4f\n", i, j, k, soma_serie(i, j, k));
-    return 0;
+int SomaSerie(int i, int j, int k){
+ if(i>j)
+  return;
+ printf("%d",i);
+ return i+SomaSerie(i+k,j,k);
 }
  
