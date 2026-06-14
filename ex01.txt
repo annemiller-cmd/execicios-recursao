@@ -1,15 +1,15 @@
 #include <stdio.h>
  
-int somatorio(int n) {
-    if (n == 1)
-      return 1;
-    return n + somatorio(n - 1);
+int soma(int n){
+ if(n<=1)
+  return n;
+ return n+soma(n-1);
 }
- 
-int main(void) {
-    int n;
-    printf("Digite N: ");
-    scanf("%d", &n);
-    printf("Somatorio de 1 a %d = %d\n", n, somatorio(n));
-    return 0;
+
+int main(){
+ int n;
+ printf("Digite um valor maior que 1:");
+ scanf("%d",&n);
+ printf("Soma=%d", soma(n);
+ return 0;
 }
