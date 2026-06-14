@@ -1,17 +1,15 @@
 #include <stdio.h>
  
-int potencia(int k, int n) {
-    if (k == 0)
-      return 0;
-    if (n == 0)
-      return 1;
-    return k * potencia(k, n - 1);
+int potencial(int n, int k){
+ if(n==0)
+   return 1;
+ return k*potencial(n-1,k);
 }
- 
-int main() {
-    int k, n;
-    printf("Digite k e n: ");
-    scanf("%d %d", &k, &n);
-    printf("%d^%d = %d\n", k, n, potencia(k, n));
-    return 0;
+int main(){
+ int n,k;
+ printf("Digite n e k:");
+ scanf("%d",&n);
+ scanf("%d",&k);
+ printf("%d",potencial(n,k));
+ return 0;
 }
