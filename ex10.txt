@@ -6,7 +6,7 @@ void pares_decrescente(int n) {
     pares_decrescente(n - 2);
 }
  
-int main(void) {
+int main() {
     int n;
     printf("Digite N (par): ");
     scanf("%d", &n);
