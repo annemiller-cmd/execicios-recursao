@@ -2,8 +2,15 @@
  
 int SomaSerie(int i, int j, int k){
  if(i>j)
-  return;
- printf("%d",i);
- return i+SomaSerie(i+k,j,k);
+  return 0;
+ return SomaSerie(i+k,j,k)+i;
 }
  
+ 
+int main() {
+    int i, j, k;
+    printf("Digite i, j e k: ");
+    scanf("%d %d %d", &i, &j, &k);
+    printf("%d",SomaSerie(i, j, k));
+    return 0;
+}
